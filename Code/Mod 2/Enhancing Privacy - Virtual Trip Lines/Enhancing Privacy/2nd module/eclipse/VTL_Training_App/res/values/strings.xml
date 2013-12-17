@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="enter">Enter</string>
+    <string name="header">Welcome to the Training Application of Virtual Trip Lines</string>
+    <string name="app_name">VTL - Training App.</string>
+    <string name="maintext2">Virtual Trip Lines Training Application</string>
+    <string name="instructions">Basic Instructions:</string>
+    <string name="instructions1">1. Turn On the GPS Connection in your mobile.</string>
+    <string name="instructions2">2. Stand in a place(Outdoors) where you can get the GPS position accurately.</string>
+    <string name="instructions3">3. Proceed the Application and note down the GPS positions.</string>
+    <string name="instructions4">4. Walk on the road and note down the various Latitude and Longitude positions.</string>
+    <string name="instructions5">5. Note the readings and close the application.</string>
+    <string name="Proceed">Proceed</string>        
+</resources> 

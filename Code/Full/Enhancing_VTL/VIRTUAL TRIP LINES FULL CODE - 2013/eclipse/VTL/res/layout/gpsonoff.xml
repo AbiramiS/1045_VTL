@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/wishessprout">
+    
+<TextView
+  android:id="@+id/gpsstatus"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:background="#000000" android:textColor="#FFFF00"
+  />
+<EditText android:layout_width="wrap_content" android:id="@+id/editText101" android:layout_height="wrap_content" android:layout_below="@+id/textView102" android:layout_alignParentLeft="true" android:layout_alignParentRight="true"></EditText>
+<Button android:layout_width="wrap_content" android:id="@+id/button100" android:text="Submit Server IP." android:layout_height="wrap_content" android:layout_below="@+id/editText101" android:layout_alignParentLeft="true" android:layout_alignParentRight="true"></Button>
+<Button android:layout_width="fill_parent" android:id="@+id/setgps_ACTION_LOCATION_SOURCE_SETTINGS" android:textColor="#000000" android:text="Turn On/Off GPS Using ACTION_LOCATION_SOURCE_SETTINGS" android:layout_height="wrap_content" android:layout_below="@+id/button100" android:layout_alignParentLeft="true"></Button>
+<Button android:layout_width="fill_parent" android:id="@+id/setgps_ACTION_SECURITY_SETTINGS" android:textColor="#000000" android:text="Turn On/Off GPS Using ACTION_SECURITY_SETTINGS" android:layout_height="wrap_content" android:layout_below="@+id/setgps_ACTION_LOCATION_SOURCE_SETTINGS" android:layout_alignParentLeft="true"></Button>
+<Button android:layout_width="fill_parent" android:enabled="false" android:id="@+id/PROCEEDHOME" android:textColor="#000000" android:text="Enter Project VTL" android:layout_height="wrap_content" android:layout_below="@+id/setgps_ACTION_SECURITY_SETTINGS" android:layout_alignParentLeft="true"></Button>
+
+</RelativeLayout> 

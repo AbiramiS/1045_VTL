@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+  
+  <form-bean name="ClientRegistration" type="org.apache.struts.validator.DynaValidatorForm">
+  <form-property name="username" type="java.lang.String"/>
+  <form-property name="password" type="java.lang.String"/>
+  <form-property name="emailid" type="java.lang.String"/>
+  <form-property name="mobileno" type="java.lang.String"/>
+  <form-property name="question" type="java.lang.String"/>
+  <form-property name="answer" type="java.lang.String"/>
+  </form-bean>
+
+
+		<form-bean name="RegistrationForm" type="org.apache.struts.validator.DynaValidatorForm">
+        <form-property name="username" type="java.lang.String"/>
+        <form-property name="password" type="java.lang.String"/>
+        <form-property name="gender" type="java.lang.String"/>
+        <form-property name="mobileno" type="java.lang.String"/>
+        <form-property name="emailid" type="java.lang.String"/>
+        </form-bean>
+                
+        <form-bean name="LoginForm" type="org.apache.struts.validator.DynaValidatorForm">
+        <form-property name="userid" type="java.lang.String"/>
+        <form-property name="password" type="java.lang.String"/>
+        </form-bean>
+        
+        <form-bean name="RequestIdForm" type="org.apache.struts.validator.DynaValidatorForm">
+        <form-property name="userid" type="java.lang.String"/>
+        </form-bean>
+        
+        <form-bean name="ViewVTLForm" type="org.apache.struts.validator.DynaValidatorForm">
+        <form-property name="luserid" type="java.lang.String"/>
+        <form-property name="authenid" type="java.lang.String"/>
+        </form-bean>
+        
+        <form-bean name="UpdateVTLForm" type="org.apache.struts.validator.DynaValidatorForm">
+        <form-property name="userid2" type="java.lang.String"/>
+        </form-bean>
+        
+        <form-bean name="LaunchAppForm" type="org.apache.struts.validator.DynaValidatorForm">     
+        <form-property name="authenid" type="java.lang.String"/>   
+        <form-property name="phonelineno" type="java.lang.String"/>
+        <form-property name="imeino" type="java.lang.String"/>
+        <form-property name="userid" type="java.lang.String"/>
+        <form-property name="keyvalue" type="java.lang.String"/>
+        <form-property name="totval" type="java.lang.String"/>
+        </form-bean>     
+        
+        
+        <form-bean name="AdminCalculationForm" type="org.apache.struts.validator.DynaValidatorForm">     
+        <form-property name="fromlatitude" type="java.lang.String"/>   
+        <form-property name="fromlongitude" type="java.lang.String"/>
+        <form-property name="tolatitude" type="java.lang.String"/>
+        <form-property name="tolongitude" type="java.lang.String"/>
+        </form-bean>    
+        
+        <form-bean name="AdminUpdationForm" type="org.apache.struts.validator.DynaValidatorForm">     
+        <form-property name="latitude" type="java.lang.String"/>   
+        <form-property name="longitude" type="java.lang.String"/>
+        </form-bean> 
+        
+        <form-bean name="AdminLoginForm" type="org.apache.struts.validator.DynaValidatorForm">     
+        <form-property name="adminname" type="java.lang.String"/>   
+        <form-property name="adminpassword" type="java.lang.String"/>
+        </form-bean>
+        
+        <form-bean name="SpeedUpdatesForm" type="org.apache.struts.validator.DynaValidatorForm">  
+        <form-property name="authenid" type="java.lang.String"/>   
+        <form-property name="useridvalue" type="java.lang.String"/>   
+        <form-property name="latitude" type="java.lang.String"/>   
+        <form-property name="longitude" type="java.lang.String"/>
+        <form-property name="currentSpeed" type="java.lang.String"/>
+        <form-property name="kmphSpeed" type="java.lang.String"/>
+        <form-property name="avgSpeed" type="java.lang.String"/>
+        <form-property name="avgKmph" type="java.lang.String"/>
+        </form-bean> 
+  
+  </form-beans> 
+  <global-exceptions />
+  <global-forwards />
+  
+  <action-mappings>
+  
+  <action input="/register.jsp" name="ClientRegistration" path="/client_registration_form" scope="session" type="com.struts.UserRegistration">
+  <forward name="registrationsuccess" path="/custregsuccess.jsp"/>
+  <forward name="registrationfailure" path="/custregfailure.jsp"/>
+  </action>
+  
+  <action input="/calculation.jsp" name="AdminCalculationForm" path="/AdminCalculation" scope="session" type="com.source.AdminCalculation">
+  <forward name="calcsuccess" path="/calcsuccess.jsp"/>
+  <forward name="samepositions" path="/samepositions.jsp"/>
+  </action>
+  
+  <action input="/updation.jsp" name="AdminUpdationForm" path="/AdminUpdation" scope="session" type="com.source.AdminUpdation">
+  <forward name="responsevalues" path="/responsevalues.jsp"/>
+  </action>
+  
+  <action path="/viewvtl" name="ViewVTLForm" scope="session" type="com.source.ViewVTL"/>
+  
+  <action path="/launchapp" name="LaunchAppForm" scope="session" type="com.source.LaunchApp"/>
+  
+  <action path="/updatevtl" name="UpdateVTLForm" scope="session" type="com.source.UpdateVTL"/>
+  
+  <action input="/adminlogin.jsp" name="AdminLoginForm" path="/AdminLogin" scope="session" type="com.source.AdminLogin">
+  <forward name="adminloginsuccess" path="/adminsuccess.jsp"/>
+  <forward name="adminloginfailure" path="/adminfailure.jsp"/>
+  </action>
+  
+  <action path="/userlogin" name="LoginForm" scope="session" type="com.source.UserLogin"/>
+
+  <action path="/requestid" name="RequestIdForm" scope="session" type="com.source.AuthenticationIdGeneration"/>
+   
+  <action path="/userregistration" name="RegistrationForm" scope="session" type="com.source.VehicleUserRegistration"/>
+  
+  <action path="/speedupdates" name="SpeedUpdatesForm" scope="session" type="com.source.SpeedUpdates"/>
+  
+  </action-mappings>
+  <message-resources parameter="com.source.ApplicationResources" />    
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+        
+</struts-config>
+
+

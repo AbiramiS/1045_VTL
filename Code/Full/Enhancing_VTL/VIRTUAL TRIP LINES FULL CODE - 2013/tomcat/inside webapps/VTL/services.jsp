@@ -1,0 +1,110 @@
+<%@page import="java.util.*,java.io.*,java.sql.*" contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>----Index----</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="layout.css" rel="stylesheet" type="text/css" />
+<script src="maxheight.js" type="text/javascript"></script>
+</head>
+
+<body id="index_1" onload="new ElementMaxHeight();">
+
+
+
+	<div id="header_tall">
+		<div id="main">
+			<!--header -->
+			<div id="header">
+				<div class="h_logo">
+						<div class="left">
+						<img alt="" src="images/vtllogonew.png" /><br />
+					</div>
+					<div class="right">
+						<a href="#"><strong>Virtual Trip Lines</strong></a></div>
+					<div class="clear"></div>
+				</div>
+				<div id="menu">
+					<div class="rightbg">
+						<div class="leftbg">
+							<div class="padding">
+								<ul>
+									<li><span>About us</span></li>
+									<li><a href="solutions.jsp">Solutions</a></li>
+									<li><a href="products.jsp">Products</a></li>
+									<li><a href="clients.jsp">Clients</a></li>
+									<li><a href="services.jsp">Services</a></li>
+									<li class="last"><a href="contacts.jsp">Contacts</a></li>
+								</ul>
+								<br class="clear" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<img alt="" src="images/header_t1.jpg" /><br />
+					<img alt="" src="images/header_t2.jpg" /><br />
+					<div class="text">
+						<b><strong><font color="white">Enhancing Privacy and Accuracy in Probe Vehicle-Based Traffic Monitoring via Virtual Trip Lines.</font></strong></b><br />
+					</div>   
+					<a href="#"><img alt="" src="images/header_click_here.jpg" /></a><div class="clear"></div>
+				</div>
+			</div>
+			<!--header end-->
+			<div id="middle">
+				<div class="indent">
+					<div class="column1">
+						<div class="padding1">
+						
+					  <hr/><center> 
+					  <h1><font color="black" size="5"><strong><center>VIRTUAL TRIP LINES</center></strong></font></h1><br/>
+					  <center><html:form action="/AdminUpdation">
+			          <label>Upload Virtual Trip Lines</label><br/><br/>
+			          Latitude:&nbsp;&nbsp; <html:text name="AdminUpdationForm" property="latitude"/>
+			          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Longitude:&nbsp;&nbsp; <html:text name="AdminUpdationForm" property="longitude"/><br/>
+			          <br/><html:submit value="View" style="background-color:black; color:white;"/>
+			          <html:reset value="Reset" style="background-color:black; color:white;"/>
+			          <br class="spacer" />
+			          <div style="color:red">
+			     	  <html:errors />
+					  </div>  
+					  </html:form></center>
+						</div>
+						<div class="padding2">
+							<img alt="" src="images/2-t2.gif" /><br />
+							<div class="content">
+								
+							</div>
+						</div>
+					</div>
+					<div class="column2">
+						<div class="border">
+							<div class="btall">
+								<div class="ltall">
+									<div class="rtall">
+										<div class="tleft">
+											<div class="tright">
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> 
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!--footer -->
+			<div id="footer">
+				<div class="indent">
+					<center>Copyright &copy; 2012 Solutions Online &bull; <a href="index-6.html">Privacy Policy</a></center></div>
+			</div>
+			<!--footer end-->
+		</div>
+	</div>
+</body>
+</html>

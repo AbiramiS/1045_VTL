@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/wishessprout">
+    <TextView android:layout_width="wrap_content" android:text="Enter the Decryption Key:" android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginTop="93dp"></TextView>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/editTextDialogUserInput11" android:layout_below="@+id/textView1" android:layout_marginTop="29dp" android:layout_alignRight="@+id/textView1" android:layout_alignLeft="@+id/textView1"></EditText>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/button11" android:text="OK" android:layout_below="@+id/editTextDialogUserInput11" android:layout_alignLeft="@+id/editTextDialogUserInput11" android:layout_marginTop="67dp" android:layout_alignRight="@+id/editTextDialogUserInput11"></Button>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/button12" android:text="Goto Inbox" android:layout_below="@+id/button11" android:layout_alignLeft="@+id/button11" android:layout_marginTop="41dp" android:layout_alignRight="@+id/button11"></Button>
+
+</RelativeLayout>

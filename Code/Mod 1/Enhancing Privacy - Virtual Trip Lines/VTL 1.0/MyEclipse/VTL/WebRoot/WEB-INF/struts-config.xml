@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+  
+  <form-bean name="ClientRegistration" type="org.apache.struts.validator.DynaValidatorForm">
+  <form-property name="username" type="java.lang.String"/>
+  <form-property name="password" type="java.lang.String"/>
+  <form-property name="emailid" type="java.lang.String"/>
+  <form-property name="mobileno" type="java.lang.String"/>
+  <form-property name="question" type="java.lang.String"/>
+  <form-property name="answer" type="java.lang.String"/>
+  </form-bean>
+
+
+		<form-bean name="RegistrationForm" type="org.apache.struts.validator.DynaValidatorForm">
+        <form-property name="username" type="java.lang.String"/>
+        <form-property name="password" type="java.lang.String"/>
+        <form-property name="gender" type="java.lang.String"/>
+        <form-property name="mobileno" type="java.lang.String"/>
+        <form-property name="emailid" type="java.lang.String"/>
+        </form-bean>
+        
+        <form-bean name="ProxyResponseForm" type="org.apache.struts.validator.DynaValidatorForm">
+        <form-property name="proxyvalue" type="java.lang.String"/>
+        </form-bean>
+ 
+  
+  </form-beans> 
+  <global-exceptions />
+  <global-forwards />
+  
+  <action-mappings>
+  
+  <action input="/register.jsp" name="ClientRegistration" path="/client_registration_form" scope="session" type="com.struts.UserRegistration">
+  <forward name="registrationsuccess" path="/custregsuccess.jsp"/>
+  <forward name="registrationfailure" path="/custregfailure.jsp"/>
+  </action>
+  
+  <action path="/proxyresponse" name="ProxyResponseForm" scope="session" type="com.source.ProxyResponse"/>
+   
+  <action path="/userregistration" name="RegistrationForm" scope="session" type="com.source.VehicleUserRegistration"/>
+  
+  </action-mappings>
+  <message-resources parameter="com.struts.ApplicationResources" />    
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+        
+</struts-config>
+
+

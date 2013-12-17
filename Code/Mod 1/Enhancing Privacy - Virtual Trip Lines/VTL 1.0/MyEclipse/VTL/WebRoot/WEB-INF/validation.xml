@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+
+  <formset>
+  <form name="RegisterForm">
+        	<field
+                property="username"
+                depends="required">
+                    <arg0 key="RegisterForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required">
+                    <arg0 key="RegisterForm.password"/>
+            </field>
+            <field
+                property="emailid"
+                depends="required">
+                    <arg0 key="RegisterForm.emailid"/>
+            </field>
+            <field
+                property="mobileno"
+                depends="required">
+                    <arg0 key="RegisterForm.mobileno"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+  <formset>
+  <form name="PaymentForm">
+        	<field
+                property="custid"
+                depends="required">
+                    <arg0 key="PaymentForm.custid"/>
+            </field>
+            <field
+                property="custpass"
+                depends="required">
+                    <arg0 key="PaymentForm.custpass"/>
+            </field>
+            <field
+                property="custbankname"
+                depends="required">
+                    <arg0 key="PaymentForm.custbankname"/>
+            </field>
+            <field
+                property="custaccno"
+                depends="required">
+                    <arg0 key="PaymentForm.custaccno"/>
+            </field>
+            <field
+                property="custbankid"
+                depends="required">
+                    <arg0 key="PaymentForm.custbankid"/>
+            </field>
+            <field
+                property="custbillno"
+                depends="required">
+                    <arg0 key="PaymentForm.custbillno"/>
+            </field>
+            </form>
+  </formset>
+ 
+  
+  
+  <formset>
+  <form name="ClientRegistration">
+        	<field
+                property="username"
+                depends="required">
+                    <arg0 key="ClientRegistration.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required">
+                    <arg0 key="ClientRegistration.password"/>
+            </field>  
+            <field property="emailid" depends="required,email">
+				<msg name="required" key="ClientRegistration.emailid"/>
+				<msg name="email" key="ClientRegistration.emailid"/>
+			</field>          
+            <field property="mobileno" depends="required,minlength">
+				<msg name="required" key="ClientRegistration.mobileno"/>
+				<msg name="minlength" key="ClientRegistration.mobileno"/>
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field
+                property="question"
+                depends="required">
+                    <arg0 key="ClientRegistration.question"/>
+            </field>  
+            <field
+                property="answer"
+                depends="required">
+                    <arg0 key="ClientRegistration.answer"/>
+            </field>  
+            </form>
+  </formset>
+  
+  <formset>
+  <form name="LoginForm">
+        	<field
+                property="loginuserid"
+                depends="required">
+                    <arg0 key="LoginForm.loginuserid"/>
+            </field>
+            <field
+                property="loginpassword"
+                depends="required">
+                    <arg0 key="LoginForm.loginpassword"/>
+            </field>
+            <field
+                property="loginpassword"
+                depends="required">
+                    <arg0 key="LoginForm.loginpassword"/>
+            </field>
+            </form>
+  </formset>
+  
+  <formset>
+  <form name="InjectLoginForm">
+		  <field property="injectadminid">
+				<arg0 key="InjectLoginForm.injectadminid"/>
+		  </field>
+		  <field property="injectadminpassword">
+ 					<arg0 key="InjectLoginForm.injectadminpassword"/>
+		  </field>
+		  <field property="injectadminquery">
+ 					<arg0 key="InjectLoginForm.injectadminquery"/>
+		  </field>
+		  </form>
+  </formset>
+  
+  
+  <formset>
+  <form name="Phase2ValidationForm">
+        	<field
+                property="question"
+                depends="required">
+                    <arg0 key="Phase2ValidationForm.question"/>
+            </field>
+            <field
+                property="answer"
+                depends="required">
+                    <arg0 key="Phase2ValidationForm.answer"/>
+            </field>
+            <field
+                property="userid"
+                depends="required">
+                    <arg0 key="Phase2ValidationForm.userid"/>
+            </field>
+            <field
+                property="sessionid"
+                depends="required">
+                    <arg0 key="Phase2ValidationForm.sessionid"/>
+            </field>
+            </form>
+  </formset>
+  
+  <formset>
+  <form name="LogoutForm">
+        	<field
+                property="userid"
+                depends="required">
+                    <arg0 key="LogoutForm.userid"/>
+            </field>
+            </form>
+  </formset>
+  
+  <formset>
+  <form name="ICAAttacksForm1Name">
+        	<field
+                property="sessionid11"
+                depends="required">
+                    <arg0 key="ICAAttacksForm1Name.sessionid11"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+  <formset>
+  <form name="ViewProfileForm">
+        	<field
+                property="profilepass"
+                depends="required">
+                    <arg0 key="ViewProfileForm.profilepass"/>
+            </field>
+            </form>
+  </formset>
+    
+    
+  <formset>
+  <form name="AttackDetectionForm">
+        	<field
+                property="sessionvalue"
+                depends="required">
+                    <arg0 key="AttackDetectionForm.sessionvalue"/>
+            </field>
+            </form>
+  </formset>
+  
+  <formset>
+  <form name="AdminLoginForm">
+        	<field
+                property="adminid"
+                depends="required">
+                    <arg0 key="AdminLoginForm.adminid"/>
+            </field>
+            <field
+                property="adminpassword"
+                depends="required">
+                    <arg0 key="AdminLoginForm.adminpassword"/>
+            </field>
+            </form>
+  </formset>
+  
+  <formset>
+  <form name="UploadForm">
+        	<field
+                property="pimage"
+                depends="required">
+                    <arg0 key="UploadForm.pimage"/>
+            </field>
+            <field
+                property="useridname"
+                depends="required">
+                    <arg0 key="UploadForm.useridname"/>
+            </field>
+            </form>
+  </formset>
+  
+  <formset>
+  <form name="ICAAttacksForm">
+        	<field
+                property="systemname"
+                depends="required">
+                    <arg0 key="ICAAttacksForm.systemname"/>
+            </field>
+            <field
+                property="username"
+                depends="required">
+                    <arg0 key="ICAAttacksForm.username"/>
+            </field>
+            <field
+                property="userpassword"
+                depends="required">
+                    <arg0 key="ICAAttacksForm.userpassword"/>
+            </field>
+            <field
+                property="userfile"
+                depends="required">
+                    <arg0 key="ICAAttacksForm.userfile"/>
+            </field>
+            <field
+                property="attsessionid"
+                depends="required">
+                    <arg0 key="ICAAttacksForm.attsessionid"/>
+            </field>
+            </form>
+  </formset>
+  
+  <formset>
+  <form name="UpdateForm">
+        	<field
+                property="userid"
+                depends="required">
+                    <arg0 key="UpdateForm.userid"/>
+            </field>
+            </form>
+  </formset>
+  
+  <formset>
+  <form name="updationform">
+            <field
+                property="userimage"
+                depends="required">
+                    <arg0 key="updationform.userimage"/>
+            </field>
+        	<field
+                property="uname"
+                depends="required">
+                    <arg0 key="updationform.uname"/>
+            </field>
+            <field
+                property="upass"
+                depends="required">
+                    <arg0 key="updationform.upass"/>
+            </field>
+            <field
+                property="uemail"
+                depends="required">
+                    <arg0 key="updationform.uemail"/>
+            </field>
+            <field
+                property="umobno"
+                depends="required">
+                    <arg0 key="updationform.umobno"/>
+            </field>
+            <field
+                property="uques"
+                depends="required">
+                    <arg0 key="updationform.uques"/>
+            </field>
+            <field
+                property="uquestion"
+                depends="required">
+                    <arg0 key="updationform.uquestion"/>
+            </field>
+            <field
+                property="uans"
+                depends="required">
+                    <arg0 key="updationform.uans"/>
+            </field>
+            <field
+                property="uid"
+                depends="required">
+                    <arg0 key="updationform.uid"/>
+            </field>
+            </form>
+  </formset>
+  
+  <formset>
+  <form name="KitchenLoginForm">
+        	<field
+                property="employeename"
+                depends="required">
+                    <arg0 key="KitchenLoginForm.employeename"/>
+            </field>
+            <field
+                property="employeepassword"
+                depends="required">
+                    <arg0 key="KitchenLoginForm.employeepassword"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+    <formset>
+  <form name="ClientLogin">
+ 		    <field
+                property="userid"
+                depends="required">
+                    <arg0 key="ClientLogin.userid"/>
+            </field>
+        	<field
+                property="password"
+                depends="required">
+                    <arg0 key="ClientLogin.password"/>
+            </field>
+            <field
+                property="totvalue"
+                depends="choose">
+                    <arg0 key="ClientLogin.totvalue"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+ <formset>
+  <form name="ItemUploadForm">
+        	<field
+                property="productname"
+                depends="required">
+                    <arg0 key="ItemUploadForm.productname"/>
+            </field>
+            <field
+                property="producttype"
+                depends="required">
+                    <arg0 key="ItemUploadForm.producttype"/>
+            </field>
+            <field
+                property="productprice"
+                depends="required">
+                    <arg0 key="ItemUploadForm.productprice"/>
+            </field>
+            <field
+                property="productflavor"
+                depends="required">
+                    <arg0 key="ItemUploadForm.productflavor"/>
+            </field>
+            <field
+                property="productmaterial"
+                depends="required">
+                    <arg0 key="ItemUploadForm.productmaterial"/>
+            </field>
+            <field
+                property="productimage"
+                depends="required">
+                    <arg0 key="ItemUploadForm.productimage"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+  <formset>
+  <form name="DisconnectForm">
+        	<field
+                property="disconnectvalue"
+                depends="required">
+                    <arg0 key="DisconnectForm.disconnectvalue"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+  
+  <formset>
+  <form name="ReplyForm">
+        	<field
+                property="replyforumsubject"
+                depends="required">
+                    <arg0 key="ReplyForm.replyforumsubject"/>
+            </field>
+            <field
+                property="replyforumtid"
+                depends="required">
+                    <arg0 key="ReplyForm.replyforumtid"/>
+            </field>
+            <field
+                property="replyforumtsubject"
+                depends="required">
+                    <arg0 key="ReplyForm.replyforumtsubject"/>
+            </field>
+            <field
+                property="replyforumtusername"
+                depends="required">
+                    <arg0 key="ReplyForm.replyforumtusername"/>
+            </field>
+            <field
+                property="replyforumcontent"
+                depends="required">
+                    <arg0 key="ReplyForm.replyforumcontent"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+  <formset>
+  <form name="ForumForm">
+        	<field
+                property="forumuserid"
+                depends="required">
+                    <arg0 key="ForumForm.forumuserid"/>
+            </field>
+        	<field
+                property="forumsubject"
+                depends="required">
+                    <arg0 key="ForumForm.forumsubject"/>
+            </field>
+            <field
+                property="forumcontent"
+                depends="required">
+                    <arg0 key="ForumForm.forumcontent"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+  <formset>
+  <form name="AdminLoginForm">
+        	<field
+                property="adminusername"
+                depends="required">
+                    <arg0 key="AdminLoginForm.adminusername"/>
+            </field>
+        	<field
+                property="adminpassword"
+                depends="required">
+                    <arg0 key="AdminLoginForm.adminpassword"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+  <formset>
+  <form name="ClientAudioForm">
+        	<field
+                property="clientname"
+                depends="required">
+                    <arg0 key="ClientAudioForm.clientname"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+  <formset>
+  <form name="AdUploadForm">
+            <field
+                property="userid"
+                depends="required">
+                    <arg0 key="AdUploadForm.userid"/>
+            </field>
+        	<field
+                property="productname"
+                depends="required">
+                    <arg0 key="AdUploadForm.productname"/>
+            </field>
+            <field
+                property="description"
+                depends="required">
+                    <arg0 key="AdUploadForm.description"/>
+            </field>
+            <field
+                property="company"
+                depends="required">
+                    <arg0 key="AdUploadForm.company"/>
+            </field>
+            <field
+                property="advertiser"
+                depends="required">
+                    <arg0 key="AdUploadForm.advertiser"/>
+            </field>
+            <field
+                property="emailid"
+                depends="required">
+                    <arg0 key="AdUploadForm.emailid"/>
+            </field>
+            <field
+                property="contactno"
+                depends="required">
+                    <arg0 key="AdUploadForm.contactno"/>
+            </field>
+            <field
+                property="uploadadimage"
+                depends="required">
+                    <arg0 key="AdUploadForm.uploadadimage"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+  <formset>
+  <form name="UploadForm">
+        	<field
+                property="pimage"
+                depends="required">
+                    <arg0 key="UploadForm.pimage"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+  <formset>
+  <form name="AdminLiveStreamAudio">
+        	<field
+                property="adminvalue"
+                depends="required">
+                    <arg0 key="AdminLiveStreamAudio.adminvalue"/>
+            </field>
+            </form>
+  </formset>
+  
+  
+        <!-- An example form -->
+        <formset>
+        <form name="logonForm">
+            <field
+                property="username"
+                depends="required">
+                    <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required,mask">
+                    <arg key="logonForm.password"/>
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                    </var>
+            </field>
+        </form>
+
+    </formset>
+
+
+    <!-- An example formset for another locale -->
+    <formset language="fr">
+
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^[0-9a-zA-Z]*$</constant-value>
+        </constant>
+
+        <!-- An example form -->
+        <form name="logonForm">
+            <field
+                property="username"
+                depends="required">
+                    <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required,mask">
+                    <arg key="logonForm.password"/>
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                    </var>
+            </field>
+        </form>
+
+   </formset>
+
+</form-validation>

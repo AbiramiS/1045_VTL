@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, VTLActivity!</string>
+    <string name="app_name">VTL</string>
+    <string name="hello1">Virtual Trip Lines</string>
+    <string name="succreg">Hello User, Successfully Registered</string>
+    <string name="failreg">Registration Failure</string>
+    <string name="proceed">                                    Proceed</string>
+    <string name="hello11">Virtual Trip Lines     				||      		    	Virtual Trip Lines      		||</string>
+    <string name="hello2">Enhancing Privacy and Accuracy in Probe Vehicle-Based Traffic Monitoring via Virtual Trip Lines</string>
+	<string name="hello3">Traffic monitoring using probe vehicles with GPS receivers promises significant improvements in cost, coverage, and
+accuracy over dedicated infrastructure systems. Current approaches, however, raise privacy concerns because they require
+participants to reveal their positions to an external traffic monitoring server. To address this challenge, we describe a system based on
+virtual trip lines and an associated cloaking technique, followed by another system design in which we relax the privacy requirements to
+maximize the accuracy of real-time traffic estimation. We introduce virtual trip lines which are geographic markers that indicate where
+vehicles should provide speed updates. These markers are placed to avoid specific privacy sensitive locations. They also allow
+aggregating and cloaking several location updates based on trip line identifiers, without knowing the actual geographic locations of
+these trip lines. Thus, they facilitate the design of a distributed architecture, in which no single entity has a complete knowledge of
+probe identities and fine-grained location information. 
+</string> 
+<string name="registration">User Registration</string>
+<string name="server_url">http://10.0.0.11:9999/VTL/</string>
+<string name="proxy_ip">10.0.0.11</string>
+<string name="proxy_port">8090</string>   
+<string name="username">UserName</string>
+<string name="password">Password</string>
+<string name="gender">Gender</string>
+<string name="male">Male</string>
+<string name="female">Female</string> 
+<string name="mobileno">Mobile No</string>
+<string name="emailid">E Mail Id</string>
+<string name="submit">Submit</string>
+</resources>

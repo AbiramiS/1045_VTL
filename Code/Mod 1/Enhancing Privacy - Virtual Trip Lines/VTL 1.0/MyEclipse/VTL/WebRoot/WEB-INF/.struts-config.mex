@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/client_registration_form.do" location="50,50" dimension="184,96" />
+  <StrutsActivity path="/proxyresponse.do" location="1550,250" dimension="177,96" />
+  <StrutsActivity path="/custregsuccess.jsp" location="1250,450" dimension="132,51" />
+  <StrutsActivity path="/custregfailure.jsp" location="1550,450" dimension="125,51" />
+  <StrutsActivity path="/register.jsp" location="50,650" dimension="92,51" />
+  <StrutsActivity path="/attackerlogin.jsp" location="350,650" dimension="122,51" />
+  <StrutsActivity path="/userlogin.jsp" location="650,650" dimension="102,51" />
+  <StrutsActivity path="/mult_spoofing.jsp" location="950,650" dimension="130,51" />
+  <StrutsActivity path="/detection.jsp" location="1250,650" dimension="103,51" />
+  <StrutsActivity path="/invalidlogin.jsp" location="1550,650" dimension="115,51" />
+  <StrutsActivity path="/adminalreadyattackedstate.jsp" location="50,850" dimension="195,51" />
+  <StrutsActivity path="/sessionexpired.jsp" location="350,850" dimension="129,51" />
+  <StrutsActivity path="/admin_detector.jsp" location="650,850" dimension="136,51" />
+  <StrutsActivity path="/admin_attacker.jsp" location="950,850" dimension="134,51" />
+  <StrutsActivity path="/login.jsp" location="1250,850" dimension="80,51" />
+  <StrutsActivity path="/homepage.jsp" location="1550,850" dimension="110,51" />
+  <StrutsActivity path="/svalidationfail.jsp" location="50,1050" dimension="126,51" />
+  <StrutsActivity path="/index.jsp" location="350,1050" dimension="81,51" />
+  <StrutsActivity path="/icaprocessing.jsp" location="650,1050" dimension="125,51" />
+  <StrutsActivity path="/icaattacks.jsp" location="950,1050" dimension="105,51" />
+  <StrutsActivity path="/injectionproceed.jsp" location="1250,1050" dimension="142,51" />
+  <StrutsActivity path="/adminpage.jsp" location="1550,1050" dimension="113,51" />
+  <StrutsActivity path="/invalidadminlogin.jsp" location="50,1250" dimension="149,51" />
+  <StrutsActivity path="/adminlogin.jsp" location="350,1250" dimension="114,51" />
+  <StrutsActivity path="/uploadimagesuccess.jsp" location="650,1250" dimension="163,51" />
+  <StrutsActivity path="/update.jsp" location="950,1250" dimension="90,51" />
+  <StrutsActivity path="/detailsupdated.jsp" location="1250,1250" dimension="131,51" />
+  <StrutsActivity path="/injectadmin.jsp" location="1550,1250" dimension="116,51" />
+  <StrutsActivity path="/userregistration.do" />
+  <StrutsTransition id="/register.jsp,null,/client_registration_form.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="96,650" />
+      <AbsolutePoint location="96,146" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/client_registration_form.do,registrationfailure,/custregfailure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="127,146" />
+      <AbsolutePoint location="127,576" />
+      <AbsolutePoint location="1612,576" />
+      <AbsolutePoint location="1612,501" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/client_registration_form.do,registrationsuccess,/custregsuccess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="234,98" />
+      <AbsolutePoint location="1316,98" />
+      <AbsolutePoint location="1316,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

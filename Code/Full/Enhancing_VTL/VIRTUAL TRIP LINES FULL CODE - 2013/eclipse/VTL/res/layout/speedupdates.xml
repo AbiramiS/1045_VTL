@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<TextView android:text="Latitude" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/lat" android:layout_alignParentTop="true" android:layout_alignParentLeft="true"></TextView>
+<TextView android:text="Speed(m/h)" android:layout_width="wrap_content" android:id="@+id/speed" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_below="@+id/lat" android:layout_alignParentLeft="true" android:layout_marginTop="88dp"></TextView>
+<TextView android:text="Avg.Speed(kms/s)" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/avgkmph" android:layout_below="@+id/kmph" android:layout_alignParentLeft="true" android:layout_marginTop="41dp"></TextView>
+<TextView android:id="@+id/lon" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Longitude" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/lat" android:layout_alignParentLeft="true" android:layout_marginTop="30dp"></TextView>
+<TextView android:id="@+id/avgspeed" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Avg.Speed(m/s)" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/speed" android:layout_alignParentLeft="true" android:layout_marginTop="44dp"></TextView>
+<TextView android:id="@+id/kmph" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Speed(kms/h)" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/avgspeed" android:layout_alignParentLeft="true" android:layout_marginTop="32dp"></TextView>
+</RelativeLayout>
+  
